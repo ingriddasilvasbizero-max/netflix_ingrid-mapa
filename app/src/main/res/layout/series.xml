@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/tv_series_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Séries"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_series_title"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Top 10 Séries"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="4">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="37dp"
+                    android:layout_height="216dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:contentDescription="@string/desc_st"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/st" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="38dp"
+                    android:layout_height="215dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:contentDescription="@string/desc_obb"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/obb" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_columnWeight="1" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_columnWeight="1" />
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Para você"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="3">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:contentDescription="@string/img_series_desc"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/bb" />
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:contentDescription="@string/img_series_desc"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ss" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:contentDescription="@string/img_series_desc"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/pk" />
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btn_back_series"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="12dp"
+        android:background="@null"
+        android:src="@drawable/seta"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white"
+        android:contentDescription="Voltar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

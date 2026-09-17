@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/tv_catalog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Filmes e Séries"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_catalog_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Séries Premiadas"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="8dp"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false">
+
+                <View android:layout_width="0dp" android:layout_height="220dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:background="@color/dark_grey" />
+                <View android:layout_width="0dp" android:layout_height="220dp" android:layout_columnWeight="1" android:layout_margin="4dp" android:background="@color/dark_grey" />
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="162dp"
+                    android:layout_height="232dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    app:srcCompat="@drawable/st" />
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="153dp"
+                    android:layout_height="246dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    app:srcCompat="@drawable/rs" />
+
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filmes de Ação"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="8dp"/>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:columnOrderPreserved="false">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="@color/dark_grey" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:background="@color/dark_grey" />
+
+                <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="184dp"
+                    android:layout_height="252dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    app:srcCompat="@drawable/td" />
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="179dp"
+                    android:layout_height="262dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    app:srcCompat="@drawable/sc" />
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btn_back_catalog"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="12dp"
+        android:background="@null"
+        android:src="@drawable/seta"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

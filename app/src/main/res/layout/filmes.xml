@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/tv_movies_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Filmes"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movies_title"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Lançamentos"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="3">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:contentDescription="Poster do filme Anna"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/anna" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:contentDescription="Poster do filme Fuja"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/fuja" />
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:contentDescription="Poster do filme Inn"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/inn" />
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/section_comedy"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="3">
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:contentDescription="@string/desc_cara"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/cara" />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:contentDescription="@string/desc_gg"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/gg" />
+
+                <ImageView
+                    android:id="@+id/imageView17"
+                    android:layout_width="0dp"
+                    android:layout_height="220dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:contentDescription="@string/desc_de"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/de" />
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btn_back_movies"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="12dp"
+        android:background="@null"
+        android:src="@drawable/seta"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white"
+        android:contentDescription="Voltar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">netflix_ingrid</string>
+    <string name="profile_image_description">Imagem de perfil</string>
+    <string name="section_comedy">Comédia</string>
+    <string name="img_series_desc">Poster da série</string>
+    <string name="desc_st">Poster da série Stranger Things</string>
+    <string name="desc_obb">Poster da série Outer Banks</string>
+    <string name="title_my_list">Minha Lista</string>
+    <string name="btn_back_desc">Voltar</string>
+    <string name="desc_cara">Poster do filme Caramelo</string>
+    <string name="desc_gg">Poster do filme Gente Grande</string>
+    <string name="desc_de">Poster do filme De Repente 30</string>
+</resources>

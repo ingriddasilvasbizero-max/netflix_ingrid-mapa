@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Video Area (Presencial Context) -->
+    <FrameLayout
+        android:id="@+id/video_container_presencial"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/dark_grey"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back_player_presencial"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="12dp"
+            android:layout_gravity="top|end"
+            android:background="@null"
+            android:src="@drawable/seta"
+            android:scaleType="fitCenter"
+            app:tint="@color/white"
+            android:contentDescription="Voltar"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="Cinema Presencial - Sala 02"
+            android:textColor="@color/white" />
+    </FrameLayout>
+
+    <!-- Participants (Presencial) -->
+    <LinearLayout
+        android:id="@+id/participants_bar_presencial"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#33000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/video_container_presencial">
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/netflix_red" />
+        <View
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/grey" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15 pessoas presentes"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Chat/Check-in Area -->
+
+    <!-- Chat Input -->
+    <LinearLayout
+        android:id="@+id/input_area_presencial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/dark_grey"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Diga olá para quem está perto..."
+            android:textColorHint="@color/grey"
+            android:textColor="@color/white"
+            android:background="@null"
+            android:padding="8dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_send"
+            android:background="@null"
+            app:tint="@color/netflix_red"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

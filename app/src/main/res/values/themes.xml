@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Netflix_ingrid" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="colorPrimary">@color/netflix_red</item>
+    </style>
+
+    <style name="Theme.Netflix_ingrid" parent="Base.Theme.Netflix_ingrid" />
+</resources>
